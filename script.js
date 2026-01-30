@@ -59,7 +59,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all animated elements
-document.querySelectorAll('.feature-card, .service-card, .step-item').forEach(el => {
+document.querySelectorAll('.feature-card, .service-card, .step-item, .service-item-card, .onboarding-step').forEach(el => {
     observer.observe(el);
 });
 
@@ -99,6 +99,25 @@ if (heroStats) {
     }, { threshold: 0.5 });
     
     statsObserver.observe(heroStats);
+}
+
+// Initialize counters for Stats Section
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+    const statsSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stats-card .stats-number[data-target]');
+                statNumbers.forEach(stat => {
+                    const target = parseFloat(stat.getAttribute('data-target'));
+                    animateCounter(stat, target);
+                });
+                statsSectionObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    statsSectionObserver.observe(statsSection);
 }
 
 // Testimonials slider
@@ -151,6 +170,17 @@ featureCards.forEach((card, index) => {
 const serviceCards = document.querySelectorAll('.service-card');
 serviceCards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.15}s`;
+});
+
+// Stagger animation for service item cards
+const serviceItemCards = document.querySelectorAll('.service-item-card');
+serviceItemCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.08}s`;
+});
+
+// Stagger animation for onboarding steps
+document.querySelectorAll('.onboarding-step').forEach((step, index) => {
+    step.style.transitionDelay = `${index * 0.12}s`;
 });
 
 // Stagger animation for steps
@@ -272,3 +302,90 @@ window.addEventListener('load', () => {
         }, index * 200);
     });
 });
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+    });
+});
+
+// Benefits Tabs Functionality
+const tabsData = [
+    {
+        image: "image/AEPS.png",
+        title: "Aadhaar Enabled Payment System",
+        description: "Empowering Access. Simplifying Transactions. Paymanent's AEPS solution delivers secure, Aadhaar-authenticated banking services—enabling seamless cash withdrawals, balance inquiries, and fund transfers without a debit card.",
+        features: ["Secure & Compliant", "Instant Processing", "24/7 Availability"]
+    },
+    {
+        image: "image/Utility_Payments.png",
+        title: "Smart Bill Payment Gateway",
+        description: "Simplified Billing. Unified Platform. Paymanent's BBPS service offers a secure, integrated solution for hassle-free utility bill payments including electricity, water, gas, DTH, broadband and more.",
+        features: ["Multi-Biller Support", "Real-time Confirmation", "Auto Payment"]
+    },
+    {
+        image: "image/Payment_Collection.png",
+        title: "QR Code Payment Suite",
+        description: "Scan. Pay. Done. Unlock seamless transactions with Paymanent's QR Code Payment Suite—perfect for retail stores, restaurants, and all business scenarios requiring instant payment collection.",
+        features: ["Instant Settlement", "Dynamic QR", "Multi-Platform"]
+    },
+    {
+        image: "image/Money_Transfer.png",
+        title: "Global Remittance Network",
+        description: "Transfer Funds. Transcend Borders. Paymanent's Global Remittance Network enables fast, secure, and compliant cross-border money transfers with competitive exchange rates.",
+        features: ["Low Fees", "Fast Transfer", "150+ Countries"]
+    },
+    {
+        image: "image/Travel_Booking.png",
+        title: "Smart Travel Solutions",
+        description: "Plan, Book, and Embark with Confidence. Seamless travel booking services including flights, buses, and hotels with instant confirmation and competitive prices.",
+        features: ["Best Prices", "Instant Booking", "24/7 Support"]
+    }
+];
+
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabServiceImg = document.getElementById('tabServiceImg');
+const tabTitle = document.getElementById('tabTitle');
+const tabDescription = document.getElementById('tabDescription');
+const tabContentBox = document.querySelector('.tab-content-box');
+const tabFeatures = document.getElementById('tabFeatures');
+
+if (tabBtns.length > 0 && tabServiceImg && tabTitle && tabDescription) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Get data index
+            const index = parseInt(btn.getAttribute('data-index'));
+            const data = tabsData[index];
+
+            // Add animation class
+            if (tabContentBox) {
+                tabContentBox.classList.remove('fade-in');
+                void tabContentBox.offsetWidth; // Trigger reflow
+                tabContentBox.classList.add('fade-in');
+            }
+
+            // Update image
+            tabServiceImg.src = data.image;
+            tabServiceImg.alt = data.title;
+            
+            // Update content
+            tabTitle.textContent = data.title;
+            tabDescription.textContent = data.description;
+
+            // Update features if element exists
+            if (tabFeatures) {
+                tabFeatures.innerHTML = data.features.map(feature => 
+                    `<li><i class="fas fa-check-circle"></i> ${feature}</li>`
+                ).join('');
+            }
+        });
+    });
+}
