@@ -56,6 +56,68 @@ body {
     padding: 0 24px;
 }
 
+/* ===== Form & Input (mobile-friendly, inline errors) ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 43, 95, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #dc2626;
+}
+
+.form-group .error-message {
+    font-size: 13px;
+    color: #dc2626;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        min-height: 48px;
+        font-size: 16px;
+    }
+}
+
 /* ===== Animated Background ===== */
 .bg-animation {
     position: fixed;
@@ -173,6 +235,10 @@ body {
     font-size: 15px;
     transition: color 0.3s var(--ease-out);
     position: relative;
+    padding: 10px 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-link::after {
@@ -249,6 +315,7 @@ body {
 /* ===== Buttons ===== */
 .btn {
     padding: 14px 28px;
+    min-height: 48px;
     border: none;
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -257,10 +324,12 @@ body {
     transition: all 0.3s var(--ease-out);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     font-family: 'Poppins', sans-serif;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .btn::before {
@@ -279,12 +348,13 @@ body {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 14px rgba(26, 43, 95, 0.35);
+    min-height: 48px;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 20px rgba(26, 43, 95, 0.4);
 }
 
 .btn-secondary {
@@ -428,13 +498,62 @@ body {
     .hero-feature span {
         font-size: 14px;
     }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-trust-strip {
+        gap: 14px 20px;
+        justify-content: flex-start;
+    }
+    
+    .trust-badge {
+        font-size: 12px;
+    }
 }
 
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
     animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-buttons .btn {
+    min-height: 48px;
+    min-width: 44px;
+}
+
+/* Hero trust strip - security badges near CTA */
+.hero-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 28px;
+    margin-bottom: 32px;
+    animation: fadeInUp 1.25s ease-out;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+.trust-badge i {
+    color: var(--primary);
+    font-size: 14px;
 }
 
 .hero-stats-wrapper {
@@ -3072,6 +3191,23 @@ section {
 .author-role {
     font-size: 14px;
     color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.verified-badge i {
+    font-size: 11px;
 }
 
 .testimonial-nav {
@@ -4075,7 +4211,22 @@ section {
 .cta-text {
     font-size: 20px;
     opacity: 0.9;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
+}
+
+.cta-trust-mini {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.cta-trust-mini span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .cta-buttons {
