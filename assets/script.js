@@ -59,7 +59,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all animated elements
-document.querySelectorAll('.feature-card, .service-card, .step-item, .service-item-card, .onboarding-step').forEach(el => {
+document.querySelectorAll('.feature-card, .service-card, .step-item, .service-item-card, .workflow-step').forEach(el => {
     observer.observe(el);
 });
 
@@ -179,8 +179,8 @@ serviceItemCards.forEach((card, index) => {
 });
 
 // Stagger animation for onboarding steps
-document.querySelectorAll('.onboarding-step').forEach((step, index) => {
-    step.style.transitionDelay = `${index * 0.12}s`;
+document.querySelectorAll('.workflow-step').forEach((step, index) => {
+    step.style.transitionDelay = `${index * 0.08}s`;
 });
 
 // Stagger animation for steps
