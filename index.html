@@ -49,19 +49,78 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#home" class="logo">
+                <a href="index.html" class="logo">
                     <img src="image/PAYMANENT_logo.png" alt="Paymanent" class="logo-img">
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Solutions</a></li>
-                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                    <li><a href="#support" class="nav-link">Support</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="index.html#services" class="nav-link nav-link-dropdown">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <div class="nav-dropdown-inner">
+                                <div class="nav-dropdown-left">
+                                    <div class="nav-dropdown-grid">
+                                        <a href="connected-banking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-university"></i></span>
+                                            <span class="nav-dropdown-label">Connected Banking</span>
+                                        </a>
+                                        <a href="utility-payment.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                                            <span class="nav-dropdown-label">Utility Payments</span>
+                                        </a>
+                                        <a href="instant-payouts.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-bolt"></i></span>
+                                            <span class="nav-dropdown-label">Instant Payouts</span>
+                                        </a>
+                                        <a href="travel-booking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-plane"></i></span>
+                                            <span class="nav-dropdown-label">Travel Booking</span>
+                                        </a>
+                                        <a href="upi-collection.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                                            <span class="nav-dropdown-label">UPI Collection</span>
+                                        </a>
+                                        <a href="micro-atm.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-money-bill-wave"></i></span>
+                                            <span class="nav-dropdown-label">Micro ATM</span>
+                                        </a>
+                                        <a href="aadhaar-banking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-fingerprint"></i></span>
+                                            <span class="nav-dropdown-label">Aadhaar Banking</span>
+                                        </a>
+                                        <a href="verification-apis.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-shield-alt"></i></span>
+                                            <span class="nav-dropdown-label">Verification APIs</span>
+                                        </a>
+                                    </div>
+                                    <div class="nav-dropdown-footer">
+                                        <div class="nav-dropdown-social">
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-dropdown-right">
+                                    <div class="nav-dropdown-promo">
+                                        <div class="nav-dropdown-promo-img-wrap">
+                                            <img src="image/DASHBOARDIMAGE.png" alt="Paymanent" class="nav-dropdown-promo-img" loading="lazy" width="280" height="180">
+                                        </div>
+                                        <h4 class="nav-dropdown-promo-title">Paymanent — Rasta Unnati Ka</h4>
+                                        <p class="nav-dropdown-promo-desc">Simplifying Digital Payments and Banking with Seamless Solutions for Everyone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="index.html#company" class="nav-link">Company</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="#contact" class="btn btn-outline">Sign In</a>
-                    <a href="#pricing" class="btn btn-primary">Start Free UPI Integration</a>
+                    <a href="contact.html" class="btn btn-outline">Sign In</a>
+                    <a href="contact.html" class="btn btn-primary">Launch Aadhaar Banking Services</a>
                 </div>
                 <button class="mobile-toggle">
                     <span></span>
@@ -71,6 +130,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -313,52 +373,68 @@
             </div>
             <div class="services-cards-grid">
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-university"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Connected.png" alt="Connected Banking">
+                    </div>
                     <h4 class="service-item-title">Connected Banking</h4>
                     <p class="service-item-desc">All bank accounts in one dashboard. Real-time insights, automation, and smarter cash flow.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="connected-banking.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Utility.png" alt="Utility Payments">
+                    </div>
                     <h4 class="service-item-title">Utility Payments</h4>
                     <p class="service-item-desc">Bulk bill payments, reminders, GST-ready invoices—all from a single dashboard.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="utility-payment.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-qrcode"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/UPI.png" alt="UPI Collection">
+                    </div>
                     <h4 class="service-item-title">UPI Collection</h4>
                     <p class="service-item-desc">Collect via UPI links & QR. Real-time tracking and plug-and-play integration.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="upi-collection.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/ATM.png" alt="Micro ATM">
+                    </div>
                     <h4 class="service-item-title">Micro ATM</h4>
                     <p class="service-item-desc">Turn your outlet into a mini ATM. Withdrawals, balance check, earn commission.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="micro-atm.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Instant.png" alt="Instant Payouts">
+                    </div>
                     <h4 class="service-item-title">Instant Payouts</h4>
                     <p class="service-item-desc">Send money via UPI, IMPS, NEFT. Full tracking and automated disbursals.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="instant-payouts.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-plane"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Travel.png" alt="Travel Booking">
+                    </div>
                     <h4 class="service-item-title">Travel Booking</h4>
                     <p class="service-item-desc">Bus & flight tickets in real time. Earn commissions as an agent or business.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="travel-booking.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-fingerprint"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Aadhaar.png" alt="Aadhaar Banking">
+                    </div>
                     <h4 class="service-item-title">Aadhaar Banking</h4>
                     <p class="service-item-desc">AEPS withdrawals & balance check with Aadhaar and biometric verification.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="aadhaar-banking.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item-card">
-                    <div class="service-item-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="service-item-img">
+                        <img src="image/Verification.png" alt="Verification APIs">
+                    </div>
                     <h4 class="service-item-title">Verification APIs</h4>
                     <p class="service-item-desc">Verify PAN, Aadhaar, GST, bank accounts—secure, ready-to-use APIs.</p>
-                    <a href="#" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="verification-apis.html" class="service-item-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -1006,11 +1082,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+     <!-- Footer -->
+     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Logo & Description -->
                 <div class="footer-col footer-brand">
                     <div class="footer-logo">
                         <img src="image/PAYMANENT_logo.png" alt="Paymanent" class="footer-logo-img">
@@ -1039,52 +1114,48 @@
                         <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <!-- Company -->
                 <div class="footer-col">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Log in</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Sign up</a></li>
+                        <li><a href="contact.html">Log in</a></li>
                     </ul>
                 </div>
-
-                <!-- Products -->
                 <div class="footer-col">
                     <h4 class="footer-title">Products</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Connected Banking</a></li>
-                        <li><a href="#">Utility Payments</a></li>
-                        <li><a href="#">UPI Collection</a></li>
-                        <li><a href="#">Micro ATM</a></li>
-                        <li><a href="#">Instant Payouts</a></li>
-                        <li><a href="#">Travel Booking</a></li>
-                        <li><a href="#">Aadhaar Banking</a></li>
-                        <li><a href="#">Verification APIs</a></li>
+                        <li><a href="connected-banking.html">Connected Banking</a></li>
+                        <li><a href="utility-payment.html">Utility Payments</a></li>
+                        <li><a href="upi-collection.html">UPI Collection</a></li>
+                        <li><a href="micro-atm.html">Micro ATM</a></li>
+                        <li><a href="instant-payouts.html">Instant Payouts</a></li>
+                        <li><a href="travel-booking.html">Travel Booking</a></li>
+                        <li><a href="aadhaar-banking.html">Aadhaar Banking</a></li>
+                        <li><a href="verification-apis.html">Verification APIs</a></li>
                     </ul>
                 </div>
-
-                <!-- Useful Links -->
                 <div class="footer-col">
                     <h4 class="footer-title">Useful Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Solutions</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#support">Support</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#support">FAQ</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Solutions</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#support">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#support">FAQ</a></li>
+                        <li><a href="index.html">Privacy</a></li>
+                        <li><a href="index.html">Terms & Condition</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>Copyright © 2025 All Rights Reserved by Paymanent | Designed by F6 IT Services Private Ltd</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms & Condition</a>
-                    <a href="#">Refund Policy</a>
+                    <a href="index.html">Privacy</a>
+                    <a href="index.html">Terms & Condition</a>
+                    <a href="index.html">Refund Policy</a>
                 </div>
             </div>
         </div>

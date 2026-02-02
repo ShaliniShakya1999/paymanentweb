@@ -1,0 +1,632 @@
+/**
+ * Connected Banking – Service page template styles
+ * Refined UI: page banner, sections, cards, spacing
+ */
+
+/* ===== Page Banner (inner page header) ===== */
+.page-banner {
+    position: relative;
+    padding: 110px 0 80px;
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #ffffff 100%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(26, 43, 95, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(13, 148, 136, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.page-banner-strips {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    display: flex;
+    pointer-events: none;
+}
+
+.page-banner .strip {
+    flex: 1;
+    height: 100%;
+}
+
+.page-banner .strip-left {
+    background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+}
+
+.page-banner .strip-right {
+    background: linear-gradient(90deg, #f59e0b 0%, #fb923c 100%);
+}
+
+.page-banner-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.page-banner-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    animation: pageBannerTitle 0.6s ease-out;
+}
+
+@keyframes pageBannerTitle {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-banner-breadcrumb {
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    box-shadow: 0 2px 12px rgba(26, 43, 95, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    animation: pageBannerBreadcrumb 0.5s ease-out 0.15s both;
+}
+
+@keyframes pageBannerBreadcrumb {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-banner-breadcrumb a {
+    color: #1a2b5f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page-banner-breadcrumb a i {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.page-banner-breadcrumb a:hover {
+    color: #ff6b35;
+}
+
+.breadcrumb-sep {
+    color: #cbd5e1;
+    font-weight: 500;
+    user-select: none;
+}
+
+.breadcrumb-current {
+    color: #64748b;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 90px 0 56px;
+    }
+
+    .page-banner-title {
+        font-size: 34px;
+        margin-bottom: 14px;
+    }
+
+    .page-banner-breadcrumb {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* ===== Section spacing (consistent rhythm) ===== */
+.page-connected-banking .why-paymanent-section,
+.page-connected-banking .features,
+.page-connected-banking .platform-journey-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.page-connected-banking .why-paymanent-section {
+    background: #ffffff;
+}
+
+.page-connected-banking .features {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.page-connected-banking .platform-journey-section {
+    background: #ffffff;
+}
+
+/* ===== Importance / Why cards – refined UI ===== */
+.page-connected-banking .why-header {
+    margin-bottom: 48px;
+}
+
+.page-connected-banking .why-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(26, 43, 95, 0.08) 0%, rgba(26, 43, 95, 0.12) 100%);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2b5f;
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(26, 43, 95, 0.1);
+}
+
+.page-connected-banking .why-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.page-connected-banking .why-subtitle {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.page-connected-banking .why-grid {
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.page-connected-banking .why-card {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 24px rgba(26, 43, 95, 0.06);
+}
+
+.page-connected-banking .why-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-connected-banking .why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(26, 43, 95, 0.12);
+    border-color: rgba(26, 43, 95, 0.12);
+}
+
+.page-connected-banking .why-card .why-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.page-connected-banking .why-card:hover .why-icon-box {
+    transform: scale(1.08);
+}
+
+.page-connected-banking .why-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.page-connected-banking .why-card-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* Stagger for why cards */
+.page-connected-banking .why-card.visible:nth-child(1) { transition-delay: 0.1s; }
+.page-connected-banking .why-card.visible:nth-child(2) { transition-delay: 0.2s; }
+.page-connected-banking .why-card.visible:nth-child(3) { transition-delay: 0.3s; }
+
+/* ===== Features section – cleaner cards ===== */
+.page-connected-banking .section-header {
+    margin-bottom: 48px;
+}
+
+.page-connected-banking .section-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.15) 100%);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c2410c;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.page-connected-banking .section-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.page-connected-banking .section-description {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-connected-banking .features-grid.features-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.page-connected-banking .feature-card {
+    border-radius: 18px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 20px rgba(26, 43, 95, 0.05);
+    padding: 32px 28px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+}
+
+.page-connected-banking .feature-card:hover {
+    box-shadow: 0 16px 40px rgba(26, 43, 95, 0.1);
+    border-color: rgba(26, 43, 95, 0.12);
+}
+
+.page-connected-banking .feature-card .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+}
+
+.page-connected-banking .feature-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.page-connected-banking .feature-text {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* ===== Journey section (default: steps only, single column – for utility-payment etc.) ===== */
+.page-connected-banking .journey-content:not(.how-it-works-grid) {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.page-connected-banking .journey-steps {
+    width: 100%;
+}
+
+.page-connected-banking .journey-header {
+    margin-bottom: 48px;
+}
+
+.page-connected-banking .journey-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(26, 43, 95, 0.08) 0%, rgba(26, 43, 95, 0.12) 100%);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2b5f;
+    margin-bottom: 16px;
+    border: 1px solid rgba(26, 43, 95, 0.1);
+}
+
+.page-connected-banking .journey-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.page-connected-banking .journey-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.page-connected-banking .journey-step {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-connected-banking .journey-step.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.page-connected-banking .journey-step .step-content {
+    border-radius: 18px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(26, 43, 95, 0.05);
+    padding: 28px 32px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.page-connected-banking .journey-step .step-content:hover {
+    box-shadow: 0 12px 32px rgba(26, 43, 95, 0.08);
+    border-color: rgba(26, 43, 95, 0.1);
+}
+
+.page-connected-banking .journey-step .step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(26, 43, 95, 0.2);
+}
+
+.page-connected-banking .journey-step.visible:nth-child(1) { transition-delay: 0.1s; }
+.page-connected-banking .journey-step.visible:nth-child(2) { transition-delay: 0.2s; }
+.page-connected-banking .journey-step.visible:nth-child(3) { transition-delay: 0.3s; }
+.page-connected-banking .journey-step.visible:nth-child(4) { transition-delay: 0.4s; }
+
+/* ===== How it works – modern layout (left: 2x2 steps + CTA, right: illustration) ===== */
+.how-it-works-modern .journey-content.how-it-works-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: none;
+    margin: 0;
+}
+
+.how-it-works-left {
+    max-width: 560px;
+}
+
+.how-it-works-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+}
+
+.how-it-works-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.how-it-works-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.how-it-works-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    margin-bottom: 32px;
+}
+
+.how-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.how-step-icon-wrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    border: 2px solid #93c5fd;
+    background: rgba(147, 197, 253, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #1a2b5f;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.how-step:hover .how-step-icon-wrap {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.how-step-body {
+    flex: 1;
+}
+
+.how-step-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.how-step-num {
+    color: #1a2b5f;
+    margin-right: 2px;
+}
+
+.how-step-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.btn-how-cta {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-how-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(26, 43, 95, 0.25);
+}
+
+.how-it-works-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works-illustration {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+.how-illus-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%;
+    height: 85%;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(147, 197, 253, 0.2) 100%);
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    z-index: 0;
+    animation: howShapeFloat 8s ease-in-out infinite;
+}
+
+@keyframes howShapeFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-10px, -15px) scale(1.02); }
+}
+
+.how-illus-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(26, 43, 95, 0.12));
+}
+
+@media (max-width: 1024px) {
+    .how-it-works-modern .journey-content.how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .how-it-works-left {
+        max-width: 100%;
+    }
+
+    .how-it-works-right {
+        order: -1;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-title {
+        font-size: 32px;
+    }
+
+    .how-it-works-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 28px;
+    }
+
+    .how-step-icon-wrap {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-connected-banking .features-grid.features-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-connected-banking .why-paymanent-section,
+    .page-connected-banking .features,
+    .page-connected-banking .platform-journey-section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .page-connected-banking .why-title,
+    .page-connected-banking .section-title,
+    .page-connected-banking .journey-title {
+        font-size: 28px;
+    }
+
+    .page-connected-banking .features-grid.features-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-connected-banking .journey-content {
+        max-width: 100%;
+    }
+
+    .page-connected-banking .feature-card {
+        padding: 28px 24px;
+    }
+}

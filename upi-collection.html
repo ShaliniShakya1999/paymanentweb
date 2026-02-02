@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Collection — Collect Payments Instantly with UPI | Paymanent</title>
+    <meta name="description" content="Collect payments instantly using UPI links or QR codes. Real-time tracking, branded UPI handles, and easy integration via UPI APIs.">
+    <meta name="keywords" content="UPI collection, UPI payment, QR code payment, payment links, Paymanent">
+    <link rel="icon" type="image/png" href="image/FAVICON.png">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/connected-banking.css">
+    <link rel="stylesheet" href="assets/product-banner.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-connected-banking">
+    <!-- Animated Background Elements -->
+    <div class="bg-animation">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="image/PAYMANENT_logo.png" alt="Paymanent" class="logo-img">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="index.html#services" class="nav-link nav-link-dropdown">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <div class="nav-dropdown-inner">
+                                <div class="nav-dropdown-left">
+                                    <div class="nav-dropdown-grid">
+                                        <a href="connected-banking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-university"></i></span>
+                                            <span class="nav-dropdown-label">Connected Banking</span>
+                                        </a>
+                                        <a href="utility-payment.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                                            <span class="nav-dropdown-label">Utility Payments</span>
+                                        </a>
+                                        <a href="instant-payouts.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-bolt"></i></span>
+                                            <span class="nav-dropdown-label">Instant Payouts</span>
+                                        </a>
+                                        <a href="travel-booking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-plane"></i></span>
+                                            <span class="nav-dropdown-label">Travel Booking</span>
+                                        </a>
+                                        <a href="upi-collection.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                                            <span class="nav-dropdown-label">UPI Collection</span>
+                                        </a>
+                                        <a href="micro-atm.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-money-bill-wave"></i></span>
+                                            <span class="nav-dropdown-label">Micro ATM</span>
+                                        </a>
+                                        <a href="aadhaar-banking.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-fingerprint"></i></span>
+                                            <span class="nav-dropdown-label">Aadhaar Banking</span>
+                                        </a>
+                                        <a href="verification-apis.html" class="nav-dropdown-item">
+                                            <span class="nav-dropdown-icon"><i class="fas fa-shield-alt"></i></span>
+                                            <span class="nav-dropdown-label">Verification APIs</span>
+                                        </a>
+                                    </div>
+                                    <div class="nav-dropdown-footer">
+                                        <div class="nav-dropdown-social">
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="#" class="nav-dropdown-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-dropdown-right">
+                                    <div class="nav-dropdown-promo">
+                                        <div class="nav-dropdown-promo-img-wrap">
+                                            <img src="image/DASHBOARDIMAGE.png" alt="Paymanent" class="nav-dropdown-promo-img" loading="lazy" width="280" height="180">
+                                        </div>
+                                        <h4 class="nav-dropdown-promo-title">Paymanent — Rasta Unnati Ka</h4>
+                                        <p class="nav-dropdown-promo-desc">Simplifying Digital Payments and Banking with Seamless Solutions for Everyone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="index.html#company" class="nav-link">Company</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-outline">Sign In</a>
+                    <a href="index.html#pricing" class="btn btn-primary">Start Free UPI Integration</a>
+                </div>
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pro-level Page Banner -->
+    <section class="product-banner">
+        <div class="product-banner-strips">
+            <span class="product-strip product-strip-left"></span>
+            <span class="product-strip product-strip-right"></span>
+        </div>
+        <div class="product-banner-bg-pattern" aria-hidden="true"></div>
+        <div class="container product-banner-container">
+            <div class="product-banner-grid">
+                <div class="product-banner-left">
+                    <div class="product-banner-line-art" aria-hidden="true">
+                        <svg class="product-line-art-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 90 L20 50 L35 50 L35 70 L50 70 L50 35 L65 35 L65 60 L80 60 L80 25 L95 25 L95 45 L110 45 L110 15 L125 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+                            <path d="M150 40 L165 25 L180 35 L175 50 L165 45 Z" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.3"/>
+                            <circle cx="160" cy="38" r="3" fill="currentColor" opacity="0.25"/>
+                            <path d="M30 95 Q50 85 70 95 T110 90" stroke="currentColor" stroke-width="1" fill="none" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h1 class="product-banner-title">UPI Collection</h1>
+                    <nav class="product-banner-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="product-breadcrumb-arrow">→</span>
+                        <span class="product-breadcrumb-current">UPI Collection</span>
+                    </nav>
+                </div>
+                <div class="product-banner-right">
+                    <div class="product-banner-bars">
+                        <span class="product-bar" style="--h: 45%; --d: 0"></span>
+                        <span class="product-bar" style="--h: 70%; --d: 1"></span>
+                        <span class="product-bar" style="--h: 55%; --d: 2"></span>
+                        <span class="product-bar" style="--h: 85%; --d: 3"></span>
+                        <span class="product-bar" style="--h: 60%; --d: 4"></span>
+                        <span class="product-bar" style="--h: 75%; --d: 5"></span>
+                        <span class="product-bar" style="--h: 50%; --d: 6"></span>
+                        <span class="product-bar" style="--h: 90%; --d: 7"></span>
+                        <span class="product-bar" style="--h: 65%; --d: 8"></span>
+                        <span class="product-bar" style="--h: 80%; --d: 9"></span>
+                    </div>
+                    <div class="product-banner-floats">
+                        <div class="product-float product-float-chart"><i class="fas fa-chart-pie"></i></div>
+                        <div class="product-float product-float-check"><i class="fas fa-check-circle"></i></div>
+                        <div class="product-float product-float-laptop"><i class="fas fa-laptop"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Intro Section -->
+    <section class="product-intro">
+        <div class="container">
+            <div class="product-intro-grid">
+                <div class="product-intro-content">
+                    <span class="product-intro-badge"><i class="fas fa-qrcode"></i> UPI Collection</span>
+                    <h2 class="product-intro-title">Collect Payments via <span>UPI & QR</span></h2>
+                    <p class="product-intro-desc">Accept payments through UPI IDs, QR codes, and payment links. Real-time settlement, instant notifications, and seamless integration with your existing systems.</p>
+                    <div class="product-intro-features">
+                        <div class="product-intro-feature"><i class="fas fa-check-circle"></i> Dynamic QR</div>
+                        <div class="product-intro-feature"><i class="fas fa-check-circle"></i> Payment Links</div>
+                        <div class="product-intro-feature"><i class="fas fa-check-circle"></i> Instant Settlement</div>
+                    </div>
+                    <a href="contact.html" class="product-intro-btn">Start UPI Collection <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-intro-visual">
+                    <div class="product-intro-img-wrapper">
+                        <img src="image/UPI.png" alt="UPI Collection" class="product-intro-img">
+                        <div class="product-intro-floating top-right">
+                            <i class="fas fa-qrcode"></i>
+                            <span>Scan & Pay</span>
+                        </div>
+                        <div class="product-intro-floating bottom-left">
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant Credit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Effortless UPI Payment Collection -->
+    <section class="why-paymanent-section">
+        <div class="container">
+            <div class="why-header">
+                <span class="why-badge">Real-Time</span>
+                <h2 class="why-title">Effortless UPI Payment Collection</h2>
+                <p class="why-subtitle">Accept UPI payments with ease, track all collections in real-time, and get paid instantly.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon-box">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3 class="why-card-title">Dynamic QR Codes</h3>
+                    <p class="why-card-desc">Generate and share UPI QR instantly for seamless payment collection.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon-box">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="why-card-title">UPI ID Integration</h3>
+                    <p class="why-card-desc">Use your branded UPI handles and QR codes for professional collection.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon-box">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="why-card-title">Instant Notification</h3>
+                    <p class="why-card-desc">Get real-time alerts on every successful payment and settlement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Features</div>
+                <h2 class="section-title">Instant UPI Collection Made Simple.</h2>
+                <p class="section-description">Collect payments in real-time through dynamic UPI solutions built for modern businesses.</p>
+            </div>
+            <div class="features-grid features-grid-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3 class="feature-title">Dynamic QR Codes</h3>
+                    <p class="feature-text">Generate and share UPI QR instantly.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="feature-title">Real-Time Settlement</h3>
+                    <p class="feature-text">Get money directly into your bank account.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="feature-title">Payment Links</h3>
+                    <p class="feature-text">Create and share UPI payment links.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="feature-title">API-Based Integration</h3>
+                    <p class="feature-text">Embed UPI collection into your apps.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="feature-title">Instant Notification</h3>
+                    <p class="feature-text">Get alerts on every successful payment.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 class="feature-title">Auto Reconciliation</h3>
+                    <p class="feature-text">Match collections with invoices automatically.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-id-badge"></i>
+                    </div>
+                    <h3 class="feature-title">UPI ID Management</h3>
+                    <p class="feature-text">Custom UPI handles for your business.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Bank-Level Security</h3>
+                    <p class="feature-text">End-to-end encryption with NPCI guidelines.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="how-it-works" class="platform-journey-section how-it-works-modern">
+        <div class="container">
+            <div class="journey-content how-it-works-grid">
+                <div class="how-it-works-left">
+                    <p class="how-it-works-tagline">A Better Way to Go Live with Paymanent</p>
+                    <h2 class="how-it-works-title">How it works</h2>
+                    <p class="how-it-works-subtitle">It's fast, secure, and fully digital. Here's how businesses onboard with us in just a few simple steps:</p>
+                    <div class="how-it-works-steps">
+                        <div class="how-step">
+                            <div class="how-step-icon-wrap"><i class="fas fa-file-alt"></i></div>
+                            <div class="how-step-body">
+                                <h3 class="how-step-title"><span class="how-step-num">1.</span> Submit Business Details</h3>
+                                <p class="how-step-desc">Tell us about your company, just basic information like business name, type, and PAN/GST.</p>
+                            </div>
+                        </div>
+                        <div class="how-step">
+                            <div class="how-step-icon-wrap"><i class="fas fa-check-circle"></i></div>
+                            <div class="how-step-body">
+                                <h3 class="how-step-title"><span class="how-step-num">2.</span> Verify & KYC</h3>
+                                <p class="how-step-desc">We instantly verify your documents with our real-time API checks (PAN, Aadhaar, GST, etc.).</p>
+                            </div>
+                        </div>
+                        <div class="how-step">
+                            <div class="how-step-icon-wrap"><i class="fas fa-plug"></i></div>
+                            <div class="how-step-body">
+                                <h3 class="how-step-title"><span class="how-step-num">3.</span> Activate APIs or Dashboard</h3>
+                                <p class="how-step-desc">Based on your business needs, get access to our API keys or business dashboard right away.</p>
+                            </div>
+                        </div>
+                        <div class="how-step">
+                            <div class="how-step-icon-wrap"><i class="fas fa-hand-holding-usd"></i></div>
+                            <div class="how-step-body">
+                                <h3 class="how-step-title"><span class="how-step-num">4.</span> Start Transacting</h3>
+                                <p class="how-step-desc">Collect payments, make payouts, access reports, and scale securely—everything from one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-how-cta">Paymanent Now</a>
+                </div>
+                <div class="how-it-works-right">
+                    <div class="how-it-works-illustration">
+                        <div class="how-illus-shape"></div>
+                        <img src="image/CUSTOM_PAYMENT_SOLUTION.png" alt="Go live with Paymanent - simple steps" class="how-illus-img" loading="lazy" width="480" height="400">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+     <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-content">
+                <div class="stats-info">
+                    <span class="stats-badge">Trusted infrastructure</span>
+                    <h2 class="stats-title">Built for Scale. Built for Trust.</h2>
+                    <p class="stats-desc">Fast, secure payments and payouts. No hidden charges—transparent pricing from day one.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="stats-number" data-target="250">0</div>
+                        <div class="stats-suffix">K+</div>
+                        <p class="stats-label">Transactions processed monthly</p>
+                    </div>
+                    <div class="stats-card highlight">
+                        <div class="stats-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stats-number">4x</div>
+                        <div class="stats-suffix">Faster</div>
+                        <p class="stats-label">Payouts vs traditional banking</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stats-number" data-target="10">0</div>
+                        <div class="stats-suffix">K+</div>
+                        <p class="stats-label">Businesses on Paymanent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- FAQ Section -->
+ <section id="support" class="faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <div class="section-badge">FAQ</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">Quick answers about Paymanent’s payments, banking, and services.</p>
+        </div>
+        <div class="faq-accordion">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <h4>How do I start accepting payments with Paymanent?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sign up on our platform, complete KYC with basic documents (ID, address proof, PAN if applicable), and integrate via API or dashboard. You can start accepting UPI, cards, and wallet payments within a few days.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is AEPS / Aadhaar Banking?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>AEPS lets you offer cash withdrawal, balance enquiry, and mini statements using the customer’s Aadhaar and biometric authentication. No card or phone needed—ideal for last-mile banking at your outlet.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Can I pay utility bills through Paymanent?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. We support Bharat Bill Pay (BBPS)—electricity, water, gas, DTH, broadband, and more from one dashboard. You can set reminders and get GST-ready invoices for business use.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How does UPI collection work?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>You get a unique UPI ID and QR. Customers pay by scanning the QR or using your UPI link. Amounts reflect in your linked account in real time, with tracking in your dashboard.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is Micro ATM and how do I earn?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Micro ATM turns your shop into a cash point. You can do cash withdrawal, balance check, and mini statement for customers. You earn a commission per transaction as per our pricing.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How fast are payouts to customers or vendors?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Instant payouts are supported via UPI and IMPS. NEFT payouts are processed as per bank timelines. You can disburse from your dashboard with full tracking and optional automation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What documents are needed for merchant onboarding?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Typically we need identity proof (Aadhaar/Passport/Driving licence), address proof, PAN, cancelled cheque or bank details, and a recent photograph. Business entities need registration and GST (if applicable).</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you provide verification APIs for PAN, Aadhaar, bank account?</h4>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. We offer secure, compliant APIs to verify PAN, Aadhaar, bank account, and GST. Integration is simple and suitable for onboarding, KYC, and compliance workflows.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <img src="image/PAYMANENT_logo.png" alt="Paymanent" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">A modern, technology-first payment platform built for you and your growing business.</p>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919615641564">+91-9615641564</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@paymanent.com">info@paymanent.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCO-88, 2nd Floor, Sector 12A, Gurugram, Haryana 122001</span>
+                        </li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Sign up</a></li>
+                        <li><a href="contact.html">Log in</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="connected-banking.html">Connected Banking</a></li>
+                        <li><a href="utility-payment.html">Utility Payments</a></li>
+                        <li><a href="upi-collection.html">UPI Collection</a></li>
+                        <li><a href="micro-atm.html">Micro ATM</a></li>
+                        <li><a href="instant-payouts.html">Instant Payouts</a></li>
+                        <li><a href="travel-booking.html">Travel Booking</a></li>
+                        <li><a href="aadhaar-banking.html">Aadhaar Banking</a></li>
+                        <li><a href="verification-apis.html">Verification APIs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Solutions</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#support">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#support">FAQ</a></li>
+                        <li><a href="index.html">Privacy</a></li>
+                        <li><a href="index.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 All Rights Reserved by Paymanent | Designed by F6 IT Services Private Ltd</p>
+                <div class="footer-legal">
+                    <a href="index.html">Privacy</a>
+                    <a href="index.html">Terms & Condition</a>
+                    <a href="index.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

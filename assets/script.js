@@ -58,8 +58,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all animated elements
-document.querySelectorAll('.feature-card, .service-card, .step-item, .service-item-card, .workflow-step').forEach(el => {
+// Observe all animated elements (including Connected Banking page: why-card, journey-step)
+document.querySelectorAll('.feature-card, .service-card, .step-item, .service-item-card, .workflow-step, .why-card, .journey-step').forEach(el => {
     observer.observe(el);
 });
 
@@ -141,24 +141,29 @@ function showTestimonial(index) {
     });
 }
 
-// Auto-play testimonials
-let testimonialInterval = setInterval(() => {
-    currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-    showTestimonial(currentTestimonial);
-}, 5000);
-
-// Manual navigation
-navDots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentTestimonial = index;
+// Auto-play testimonials (only when testimonials exist, e.g. on index page)
+let testimonialInterval;
+if (testimonialCards.length > 0) {
+    testimonialInterval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
         showTestimonial(currentTestimonial);
-        clearInterval(testimonialInterval);
-        testimonialInterval = setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+    }, 5000);
+}
+
+// Manual navigation for testimonial dots
+if (navDots.length > 0) {
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentTestimonial = index;
             showTestimonial(currentTestimonial);
-        }, 5000);
+            if (testimonialInterval) clearInterval(testimonialInterval);
+            testimonialInterval = setInterval(() => {
+                currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+                showTestimonial(currentTestimonial);
+            }, 5000);
+        });
     });
-});
+}
 
 // Stagger animation for feature cards
 const featureCards = document.querySelectorAll('.feature-card');
